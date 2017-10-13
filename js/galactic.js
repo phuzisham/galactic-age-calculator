@@ -7,10 +7,6 @@ export class Galactic {
     this.day = day;
   }
 
-  ageInt(str){
-    return str.replace(/\D+/g, '');
-  }
-
   ageYears() {
     return moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
   }
@@ -29,4 +25,24 @@ export class Galactic {
     return age / .24;
   }
 
+  // A Venus year is .62 Earth years.
+  venusAgeYears() {
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    age = age.replace(/\D+/g, '');
+    return age / .62;
+  }
+
+  // A Mars year is 1.88 Earth years.
+  marsAgeYears() {
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    age = age.replace(/\D+/g, '');
+    return age / 1.88;
+  }
+
+  // A Jupiter year is 11.86 Earth years.
+  jupiterAgeYears() {
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    age = age.replace(/\D+/g, '');
+    return age / 11.86;
+  }
 }
