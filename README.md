@@ -42,7 +42,7 @@ _If you have questions or run into any issues email me at: david.hale7@gmail.com
 
 ## Technologies Used
 
-JavaScript, HTML, CSS, Bootstrap, NPM, Bower._
+_JavaScript, HTML, CSS, Bootstrap, NPM, Bower._
 
 ### License
 
