@@ -22,14 +22,14 @@ export class Galactic {
   mercuryAgeYears() {
     let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
-    return age / .24;
+    return age / 0.24;
   }
 
   // A Venus year is .62 Earth years.
   venusAgeYears() {
     let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
-    return age / .62;
+    return age / 0.62;
   }
 
   // A Mars year is 1.88 Earth years.

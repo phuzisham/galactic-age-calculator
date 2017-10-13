@@ -22,5 +22,5 @@ $(document).ready(function() {
       $('#lifeExpect').text(newGalactic.expectancy);
     }
     $('#result').show(800);
-  })
+  });
 });
