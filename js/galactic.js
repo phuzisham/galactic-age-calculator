@@ -1,10 +1,12 @@
 var moment = require('moment');
 
 export class Galactic {
-  constructor(year, month, day) {
+  constructor(year, month, day, continent) {
     this.year = year;
     this.month = month;
     this.day = day;
+    this.continent = continent;
+    this.expectancy = 0;
   }
 
   ageYears() {
@@ -44,5 +46,21 @@ export class Galactic {
     let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
     age = age.replace(/\D+/g, '');
     return age / 11.86;
+  }
+
+  // Continents: North America/81, Europe/81, Oceania/79, South America/79, Asia/74, Africa/64
+  lifeExpect() {
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    age = age.replace(/\D+/g, '');
+
+    if (this.continent == 'North America' || this.continent == 'Europe') {
+      this.expectancy = 81 - age;
+    } else if (this.continent == 'Oceania' || 'South America') {
+      this.expectancy = 79 - age;
+    } else if (this.continent == 'Asia') {
+      this.expectancy = 74 - age;
+    } else {
+      this.expectancy = 64 - age;
+    }
   }
 }
