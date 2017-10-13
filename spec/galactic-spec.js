@@ -14,7 +14,7 @@ describe('galactic', function() {
   });
 
   it('will return age on earth given birthdate', function() {
-    expect(testGalacticEU.ageYears()).toEqual("30 years ago");
+    expect(testGalacticEU.ageYears()).toEqual("30");
   });
 
   it('will return age on earth given birthdate in seconds', function() {

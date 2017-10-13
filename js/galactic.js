@@ -8,7 +8,7 @@ export class Galactic {
   }
 
   ageYears() {
-    return moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
+    return moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow().replace(/\D+/g, '');
   }
 
   ageSeconds() {
