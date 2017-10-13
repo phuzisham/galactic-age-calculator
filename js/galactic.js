@@ -8,6 +8,14 @@ export class Galactic {
   }
 
   earthAge() {
-    return moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let ageSeconds;
+
+    age = age.replace(/\D+/g, '');
+    // Convert years to seconds.
+    debugger;
+    return age * 3.154e+7;
   }
+
+
 }
