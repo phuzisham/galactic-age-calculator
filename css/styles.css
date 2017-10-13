@@ -1,8 +1,24 @@
+.jumbotron {
+  background-color: #5e3448;
+}
+
+body {
+  color: #ecdfbd;
+  background-color: #3b3a35;
+  font-family: 'Concert One', cursive;
+}
+
 .card {
   padding: 20px;
   margin: 20px;
+  background-color: #20457c;
 }
 
 #result {
   display: none;
+}
+
+.btn {
+  color: #5e3448;
+  background-color: #fb6648;
 }
