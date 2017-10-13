@@ -61,4 +61,19 @@ export class Galactic {
       this.expectancy = 64 - age;
     }
   }
+
+  lifeExpectMercury() {
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
+    age = age.replace(/\D+/g, '');
+    if (this.continent == 'North America' || this.continent == 'Europe') {
+      this.expectancy = 81 - age;
+    } else if (this.continent == 'Oceania' || 'South America') {
+      this.expectancy = 79 - age;
+    } else if (this.continent == 'Asia') {
+      this.expectancy = 74 - age;
+    } else {
+      this.expectancy = 64 - age;
+    }
+    return this.expectancy / 0.24;
+  }
 }

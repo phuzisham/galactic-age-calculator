@@ -56,4 +56,8 @@ describe('galactic', function() {
     testGalacticAF.lifeExpect();
     expect(testGalacticAF.expectancy).toEqual(49);
   });
+
+  it('will return life expectancy based on home continent: Africa for Mercury', function() {
+    expect(testGalacticAF.lifeExpectMercury()).toEqual(204.16666666666669 );
+  });
 });

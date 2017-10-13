@@ -11,88 +11,94 @@
     <title>Galactic Age Calculator</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Galactic Age Calculator</h1>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <h4>Enter your birthdate and home country to see...</h4>
-          <ul>
-            <li>Age on Earth in:</li>
-              <ul>
-                <li>Years</li>
-                <li>Seconds</li>
-              </ul>
-            <li>Age in years on:</li>
-              <ul>
-                <li>Mercury</li>
-                <li>Venus</li>
-                <li>Mars</li>
-                <li>Jupiter</li>
-              </ul>
-            <li>Life Expectancy:</li>
-              <ul>
-                <li>Based on home continent</li>
-              </ul>
-          </ul>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Galactic Age Calculator</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <h4>Enter your birthdate and home country to see...</h4>
+            <ul>
+              <li>Age on Earth in:</li>
+                <ul>
+                  <li>Years</li>
+                  <li>Seconds</li>
+                </ul>
+              <li>Age in years on:</li>
+                <ul>
+                  <li>Mercury</li>
+                  <li>Venus</li>
+                  <li>Mars</li>
+                  <li>Jupiter</li>
+                </ul>
+              <li>Life Expectancy:</li>
+                <ul>
+                  <li>Based on home continent</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <form id="galacticForm">
+              <div class="form-group">
+                <label for="date">Birth Date:</label>
+                <input id="birthdate" class="form-control" type="date" name="date">
+              </div>
+              <div class="form-group">
+                <label for="homeContinent">Home Continent:</label>
+                <select name="homeContinent" id="homeContinent">
+                  <option value="Africa">Africa</option>
+                  <option value="Asia">Asia</option>
+                  <option value="Europe">Europe</option>
+                  <option value="North America">North America</option>
+                  <option value="Oceania">Oceania</option>
+                  <option value="South America">South America</option>
+                </select>
+              </div>
+              <button class="btn" type="submit" name="button">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <form id="galacticForm">
-            <div class="form-group">
-              <label for="date">Birth Date:</label>
-              <input id="birthdate" class="form-control" type="date" name="date">
-            </div>
-            <div class="form-group">
-              <label for="homeContinent">Home Continent:</label>
-              <select name="homeContinent" id="homeContinent">
-                <option value="Africa">Africa</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="North America">North America</option>
-                <option value="Oceania">Oceania</option>
-                <option value="South America">South America</option>
-              </select>
-            </div>
-            <button class="btn" type="submit" name="button">Submit</button>
-          </form>
+      <div id="result" class="card">
+        <div class="row">
+            <h4>Earth Age in Years: &nbsp;</h4>
+            <h4 id="earthYears"></h4>
         </div>
-      </div>
-    </div>
-    <div id="result" class="card">
-      <div class="row">
-          <h4>Earth Age in Years: &nbsp;</h4>
-          <h4 id="earthYears"></h4>
-      </div>
-      <div class="row">
-          <h4>Earth Age in Seconds: &nbsp;</h4>
-          <h4 id="earthSeconds"></h4>
-      </div>
-      <div class="row">
-          <h4>Home Continent: &nbsp;</h4>
-          <h4 id="continent"></h4>
-      </div>
-      <div class="row">
-          <h4>Life Expectancy: &nbsp;</h4>
-          <h4 id="lifeExpect"></h4>
-      </div>
-      <div class="row">
-          <h4>Mercury Age in Years: &nbsp;</h4>
-          <h4 id="mercuryYears"></h4>
-      </div>
-      <div class="row">
-          <h4>Venus Age in Years: &nbsp;</h4>
-          <h4 id="venusYears"></h4>
-      </div>
-      <div class="row">
-          <h4>Mars Age in Years: &nbsp;</h4>
-          <h4 id="marsYears"></h4>
-      </div>
-      <div class="row">
-          <h4>Jupiter Age in Years: &nbsp;</h4>
-          <h4 id="jupiterYears"></h4>
+        <div class="row">
+            <h4>Earth Age in Seconds: &nbsp;</h4>
+            <h4 id="earthSeconds"></h4>
+        </div>
+        <div class="row">
+            <h4>Home Continent: &nbsp;</h4>
+            <h4 id="continent"></h4>
+        </div>
+        <div class="row">
+            <h4>Life Expectancy: &nbsp;</h4>
+            <h4 id="lifeExpect"></h4>
+        </div>
+        <div class="row">
+            <h4>Mercury Age in Years: &nbsp;</h4>
+            <h4 id="mercuryYears"></h4>
+        </div>
+        <div class="row">
+            <h4>Mercury Life Expectancy: &nbsp;</h4>
+            <h4 id="mercuryYearsLife"></h4>
+        </div>
+        <div class="row">
+            <h4>Venus Age in Years: &nbsp;</h4>
+            <h4 id="venusYears"></h4>
+        </div>
+        <div class="row">
+            <h4>Mars Age in Years: &nbsp;</h4>
+            <h4 id="marsYears"></h4>
+        </div>
+        <div class="row">
+            <h4>Jupiter Age in Years: &nbsp;</h4>
+            <h4 id="jupiterYears"></h4>
+        </div>
       </div>
     </div>
   </body>
