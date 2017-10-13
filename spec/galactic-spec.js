@@ -7,10 +7,10 @@ describe('galactic', function() {
   let testGalacticAF;
 
   beforeEach(function() {
-  testGalacticEU = new Galactic('1987', '09', '12', 'Europe');
-  testGalacticOC = new Galactic('1987', '09', '12', 'Oceania');
-  testGalacticAS = new Galactic('1987', '09', '12', 'Asia');
-  testGalacticAF = new Galactic('1987', '09', '12', 'Africa');
+  testGalacticEU = new Galactic('1987-09-12', 'Europe');
+  testGalacticOC = new Galactic('1987-09-12', 'Oceania');
+  testGalacticAS = new Galactic('1987-09-12', 'Asia');
+  testGalacticAF = new Galactic('1987-09-12', 'Africa');
   });
 
   it('will return age on earth given birthdate', function() {

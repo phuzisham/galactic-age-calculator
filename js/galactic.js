@@ -1,20 +1,18 @@
 var moment = require('moment');
 
 export class Galactic {
-  constructor(year, month, day, continent) {
-    this.year = year;
-    this.month = month;
-    this.day = day;
+  constructor(birthdate, continent) {
+    this.birthdate = birthdate;
     this.continent = continent;
     this.expectancy = 0;
   }
 
   ageYears() {
-    return moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    return moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
   }
 
   ageSeconds() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
     // Convert years to seconds.
     return age * 3.154e+7;
@@ -22,35 +20,35 @@ export class Galactic {
 
   // A Mercury year is .24 Earth years.
   mercuryAgeYears() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
     return age / .24;
   }
 
   // A Venus year is .62 Earth years.
   venusAgeYears() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
     return age / .62;
   }
 
   // A Mars year is 1.88 Earth years.
   marsAgeYears() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
     return age / 1.88;
   }
 
   // A Jupiter year is 11.86 Earth years.
   jupiterAgeYears() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
     return age / 11.86;
   }
 
   // Continents: North America/81, Europe/81, Oceania/79, South America/79, Asia/74, Africa/64
   lifeExpect() {
-    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    let age = moment(`${this.birthdate}`, "YYYY-MM-DD").fromNow();
     age = age.replace(/\D+/g, '');
 
     if (this.continent == 'North America' || this.continent == 'Europe') {
