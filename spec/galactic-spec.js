@@ -7,11 +7,15 @@ describe('galactic', function() {
   testGalactic = new Galactic('1987', '09', '12');
   });
 
-  it('return age on earth given birthdate', function() {
-    expect(testGalactic.earthAge()).toEqual("30 years ago");
+  it('will return age on earth given birthdate', function() {
+    expect(testGalactic.ageYears()).toEqual("30 years ago");
   });
 
-  it('return age on earth given birthdate in seconds', function() {
+  it('will return age on earth given birthdate in seconds', function() {
     expect(testGalactic.ageSeconds()).toEqual(946200000);
+  });
+
+  it('will return age on mercury in years', function() {
+    expect(testGalactic.mercuryAgeYears()).toEqual(125);
   });
 });

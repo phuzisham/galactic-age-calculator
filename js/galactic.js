@@ -7,7 +7,11 @@ export class Galactic {
     this.day = day;
   }
 
-  earthAge() {
+  ageInt(str){
+    return str.replace(/\D+/g, '');
+  }
+
+  ageYears() {
     return moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
   }
 
@@ -18,5 +22,11 @@ export class Galactic {
     return age * 3.154e+7;
   }
 
+  // A Mercury year is .24 Earth years.
+  mercuryAgeYears() {
+    let age = moment(`${this.year}${this.month}${this.day}`, "YYYYMMDD").fromNow();
+    age = age.replace(/\D+/g, '');
+    return age / .24;
+  }
 
 }
