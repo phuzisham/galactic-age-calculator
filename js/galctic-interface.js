@@ -5,7 +5,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     let birthdate = $('#birthdate').val();
-    let continent = $('#continent :selected').text();
+    let continent = $('#homeContinent').val();
     let newGalactic = new Galactic(birthdate, continent);
 
     $('#earthYears').text(newGalactic.ageYears());
@@ -14,9 +14,13 @@ $(document).ready(function() {
     $('#venusYears').text(newGalactic.venusAgeYears());
     $('#marsYears').text(newGalactic.marsAgeYears());
     $('#jupiterYears').text(newGalactic.jupiterAgeYears());
+    $('#continent').text(newGalactic.continent);
     newGalactic.lifeExpect();
-    $('#continent').text(newGalactic.continent)
-    $('#lifeExpect').text(newGalactic.expectancy);
+    if (newGalactic.expectancy <= 0) {
+      $('#lifeExpect').text('You\'re on borrowed time.');
+    } else {
+      $('#lifeExpect').text(newGalactic.expectancy);
+    }
     $('#result').show(800);
   })
 });
